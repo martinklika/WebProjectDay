@@ -9,6 +9,7 @@
 </head>
 <body>
 	<h1>Employees</h1>
+	<a href=''>Add Employee Button</a>
 	<table border="1">
 		<tr>
 			<th>Title</th>

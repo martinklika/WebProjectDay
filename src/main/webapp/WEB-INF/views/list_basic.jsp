@@ -12,20 +12,16 @@
 	<table border="1">
 		<tr>
 			<th>Title</th>
+			<th>First name</th>
+			<th>Last name</th>
 		</tr>
-		<#list employees as employee>
-		<tr>
-			<td>
-					${employee.title}
-				
-			</td>
-		</tr>
-		</#list>
-	</table>
-		<ul>
 		<c:forEach items="${employees}" var="employee">
-		<li>${employee.title}</li>
+		<tr>
+			<td>${employee.title}</td>
+			<td>${employee.f_name}</td>
+			<td>${employee.l_name}</td>
+		</tr>
 		</c:forEach>
-	</ul>
+	</table>
 </body>
 </html>

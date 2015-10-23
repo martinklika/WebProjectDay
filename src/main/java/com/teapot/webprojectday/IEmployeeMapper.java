@@ -1,6 +1,9 @@
 package com.teapot.webprojectday;
 
+import java.util.Date;
 import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 public interface IEmployeeMapper {
@@ -23,5 +26,14 @@ public interface IEmployeeMapper {
 			+ "ON project.project_id = project_staff.project_id "
 			+ "WHERE project_staff.project_id IS NULL; ")
 	List<Project> getProjectsWithoutEmployees();
+	
+	@Select("INSERT INTO project(name, start_date, end_date) "
+			+ "VALUES (#{name}, #{start_date}, #{end_date});")
+	void addProject(@Param("name") String name, 
+			@Param("start_date") String start_date, 
+			@Param("end_date") String end_date);
+	
+	@Select("DELETE FROM project WHERE project_id = #{project_id};")
+	void deleteProject(@Param("project_id") int project_id);
 	
 }//interface

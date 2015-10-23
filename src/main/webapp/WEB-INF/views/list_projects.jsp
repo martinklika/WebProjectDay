@@ -5,32 +5,38 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="resources/styles.css">
 <title>${page_title}</title>
 </head>
 <body>
-	<h1>${page_title}</h1>
-	<a href=''>Add Project Button</a>
-		<br>
-	<a href='list_projects_without_employees.mvc'>
-		View Projects without Employees (list_projects_without_employees.mvc)</a>
-	<br>
-	<a href='list_basic.mvc'>View All Employees Button (list_basic.mvc)</a>
-	<br>
-	<table border="1">
-		<tr>
-			<th>Id</th>
-			<th>Name</th>
-			<th>Start date</th>
-			<th>End date</th>
-		</tr>
-		<c:forEach items="${projects}" var="project">
-		<tr>
-			<td>${project.project_id}</td>
-			<td>${project.name}</td>
-			<td>${project.start_date}</td>
-			<td>${project.end_date}</td>
-		</tr>
-		</c:forEach>
+  <div class="body">
+    <div class="title">
+      <a href="project_form_add.mvc">Add a new Project</a>
+      <a href="${button_projects_view_link}">${button_projects_view_title}</a>
+      <a href="list_basic.mvc">View Employees</a>
+      <h1>${page_title}</h1>
+    </div>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Start date</th>
+        <th>End date</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr> 
+      <c:forEach items="${projects}" var="project">
+      <tr>
+        <td>${project.project_id}</td>
+        <td>${project.name}</td>
+        <td>${project.start_date}</td>
+        <td>${project.end_date}</td>
+        <td><input type="Submit" value="Update" class="update"/></td>
+        <td><a href="delete_project/${project.project_id}/list_projects_delete.mvc">Delete</a></td>
+        
+      </tr>
+	  </c:forEach>
 	</table>
+</div>
 </body>
 </html>

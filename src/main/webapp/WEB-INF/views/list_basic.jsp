@@ -18,7 +18,7 @@
     </div>  
     <table>
       <tr>
-        <th>Employee ID</th>
+        <th>ID</th>
         <th>Title</th>
         <th>First name</th>
         <th>Last name</th>
@@ -26,6 +26,7 @@
         <th>Salary</th>
         <th>Update</th>
         <th>Delete</th>
+        <th>Assign to Projects</th>
       </tr>
       <c:forEach items="${employees}" var="employee">
       <tr>
@@ -37,10 +38,10 @@
         <td>${employee.salary}</td>
         <td><input type="Submit" value="Update" class="update"/></td>
         <td><input type="Submit" value="Delete" class="delete"/></td>
+        <td><input type="Submit" value="Assign" class="update"/></td>
       </tr>
-    </c:forEach>
-   
-</table>
+	  </c:forEach>
+	</table>
 </div>
 
 </body>

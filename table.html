@@ -1,0 +1,234 @@
+<html>
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+<head>
+  <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="teapotstyle.css">
+
+  <style type="text/css">
+
+
+.title {
+    float: left;
+    margin-top: -20px;
+  }
+
+   body {
+    background-color: #484848;
+    font-family: 'Roboto', sans-serif; 
+    width: 100%;
+  }
+
+  .body {
+    margin-left: 10px;
+    padding-top: 130px;
+}
+
+  .nav {
+  position: fixed;
+  height: 40px;
+  background-color: #9f9e9e;
+  width: 100%;
+}
+
+.active {
+  background-color: #f56e0a;
+  color: #fff;
+  padding-right: 7px;
+  padding-left: 7px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+  h1 {
+    color: #fff;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin-top: 80px;
+  }
+
+  th {
+    padding: 20px;
+    background-color: #f56e0a;
+    color: #fff;
+  }
+
+  td {
+    background-color: #9f9e9e;
+    padding: 20px;
+    color: #fff;
+  }
+
+  input[type=submit].delete {
+    padding:5px 15px;
+    background:#484848; 
+    color: #fff;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px; 
+    font-size: 0.8em;
+  }
+
+  input[type=submit].update {
+    padding:5px 15px;
+    background:#484848; 
+    color: #fff;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px; 
+    font-size: 0.8em;
+  }
+
+  input[type=submit] {
+    padding:5px 15px;
+    background:#f56e0a; 
+    color: #fff;
+    width: 80%;
+    height: 40px; 
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  
+
+  .link {
+    float: right;
+    margin-right: 28px;
+    margin-top: 30px;
+  }
+
+  a {
+    color: #fff;
+    display: inline;
+  }
+
+  a:link {
+    text-decoration: none;
+
+  }
+
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #fff;
+
+  }
+
+  a:active {
+    text-decoration: underline;
+  }
+
+  * {
+    margin: 0;
+  }
+
+ul {
+  list-style: none;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+  height: 30px;
+  padding-top: 10px;
+  padding-left: 30px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+</style>
+</head>
+
+<body>
+<div class="nav">
+   <ul>
+     <li><a href="admin.html">Administrator</a></li>
+     <li> <a href="teapot.html">Add Employee</a></li>
+     <li><a href="update.html">Update Employee</a></li>
+     <li><a href="delete.html">Delete Employee</a></li>
+    <li> <a href="project.html">Add Project</a></li>
+    <li><a href="table.html" class="active" >View Employees</a></li>
+
+     <li> <a href="">View Projects</a></li>
+   </ul>
+ </div>
+
+  <div class="body">
+ 
+    <div class="title">
+
+      <h1>Employees List</h1>
+    </div>
+    <div class="link">  
+    </div>
+    <table>
+      <tr>
+        <th>Employee ID</th>
+        <th>Title</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Date of Birth</th>
+        <th>Salary</th>
+        <th>Update</th>
+        <th>Delete</th>
+        <th>Assign to Project</th>
+      </tr>
+      <c:forEach items="${employees}" var="employee">
+      <tr>
+        <td>${employee.id}</td>
+        <td>${employee.title}</td>
+        <td>${employee.f_name}</td>
+        <td>${employee.l_name}</td>
+        <td>${employee.dob}</td>
+        <td>${employee.salary}</td>
+        <td><input type="Submit" value="Update" class="update"/></td>
+        <td><input type="Submit" value="Delete" class="delete"/></td>
+        <td><input type="Submit" value="Assign" class="assign"/></td>
+
+      </tr>
+    </c:forEach>
+     <c:forEach items="${employees}" var="employee">
+      <tr>
+        <td>${employee.id}</td>
+        <td>${employee.title}</td>
+        <td>${employee.f_name}</td>
+        <td>${employee.l_name}</td>
+        <td>${employee.dob}</td>
+        <td>${employee.salary}</td>
+        <td><input type="Submit" value="Update" class="update"/></td>
+        <td><input type="Submit" value="Delete" class="delete"/></td>
+        <td><input type="Submit" value="Assign" class="assign"/></td>
+
+      </tr>
+    </c:forEach>
+     <c:forEach items="${employees}" var="employee">
+      <tr>
+        <td>${employee.id}</td>
+        <td>${employee.title}</td>
+        <td>${employee.f_name}</td>
+        <td>${employee.l_name}</td>
+        <td>${employee.dob}</td>
+        <td>${employee.salary}</td>
+        <td><input type="Submit" value="Update" class="update"/></td>
+        <td><input type="Submit" value="Delete" class="delete"/></td>
+        <td><input type="Submit" value="Assign" class="assign"/></td>
+
+      </tr>
+    </c:forEach>
+   
+</table>
+</div>
+</body>
+</html>

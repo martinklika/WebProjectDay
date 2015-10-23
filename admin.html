@@ -1,0 +1,57 @@
+<html>
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+<head>
+	<title>Home</title>
+  <link rel="stylesheet" type="text/css" href="teapotstyle.css">
+</head>
+
+<body>
+<div class="table">
+  <div class="nav">
+   <ul>
+     <li><a href="admin.html" class="active">Administrator</a></li>
+     <li> <a href="teapot.html">Add Employee</a></li>
+     <li><a href="update.html">Update Employee</a></li>
+     <li><a href="delete.html">Delete Employee</a></li>
+     <li>  <a href="table.html" >View Employees</a></li>
+     <li> <a href="">View Projects</a></li>
+     <li> <a href="">Add Project</a></li>
+   </ul>
+ </div>
+
+ <div class="body">
+
+<div class="admin">
+
+
+  <form action="createUser" method="POST" >
+    <h2>Login Administrator</h2>
+    <p>Insert the fields below to login</p>
+    <div class="inputField">
+      <input type="text" name="usernameInput" placeholder="First name">
+      <br />
+    </div>
+    <div class="inputField">
+      <input type="text" name="usernameInput" placeholder="Surename">
+      <br />
+    </div>
+    <div class="inputField">
+      <input type="text" name="usernameInput" placeholder="Date of Birth">
+      <br />
+    </div>
+    <div class="inputField">
+      <input type="text" name="password" placeholder="Title">
+      <br />
+    </div>
+    <div class="inputField">
+      <input type="text" name="password" placeholder="Salary">
+      <br />
+    </div>
+    <div class="inputField">
+    <input type="Submit" value="Submit"/>
+    </div>
+  </form>
+</div>
+</div>
+</body>
+</html>
